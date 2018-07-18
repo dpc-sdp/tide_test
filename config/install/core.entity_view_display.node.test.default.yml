@@ -4,10 +4,8 @@ dependencies:
   config:
     - field.field.node.test.body
     - field.field.node.test.field_metatags
-    - field.field.node.test.field_show_content_rating
     - field.field.node.test.field_tags
     - field.field.node.test.field_test_link
-    - field.field.node.test.field_test_media
     - field.field.node.test.field_test_reference
     - field.field.node.test.field_topic
     - node.type.test
