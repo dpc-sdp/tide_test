@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.tide_media_browser
     - field.field.node.test.body
     - field.field.node.test.field_metatags
     - field.field.node.test.field_tags
