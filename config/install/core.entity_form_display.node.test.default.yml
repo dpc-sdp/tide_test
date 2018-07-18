@@ -13,7 +13,6 @@ dependencies:
     - node.type.test
   module:
     - content_moderation
-    - entity_browser
     - inline_entity_form
     - link
     - metatag
