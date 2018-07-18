@@ -3,7 +3,7 @@ Feature: Fields for Test media entity
 
   Ensure that Test media has the expected fields.
 
-  @api
+  @api @nosuggest
   Scenario: The media entity the expected fields (and labels where we can use them).
     Given I am logged in as a user with the "create media" permission
     When I visit "media/add/testmedia"
