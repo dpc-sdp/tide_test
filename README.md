@@ -17,7 +17,7 @@ You should not need to install this module on its own, the modules having behat 
 "Test" content type should define tide_test as a dependency.
 
 # REQUIREMENTS
-* [Tide Core Profile](https://github.com/dpc-sdp/tide)
+* [Tide Core](https://github.com/dpc-sdp/tide_core)
 
 
 # INSTALLATION
