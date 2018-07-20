@@ -8,6 +8,27 @@
 use Drupal\user\Entity\Role;
 
 /**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for Tide profile Profile.
+ *
+ * @see system_install()
+ */
+function tide_test_install() {
+  // Don't do anything else during config sync.
+  if (\Drupal::isConfigSyncing()) {
+    return;
+  }
+
+  // Set the default and admin theme to Seven. It is important to set themes
+  // only to enabled ones (and we are enabling Seven in profile dependencies).
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'seven')
+    ->set('admin', 'seven')
+    ->save(TRUE);
+}
+/**
  * Implements hook_uninstall().
  */
 function tide_test_uninstall() {
