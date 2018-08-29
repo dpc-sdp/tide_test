@@ -29,3 +29,7 @@ composer require dpc-sdp/tide_test
 # PURPOSE
 - test content type
 - other test functionality
+
+# Caveats
+
+Tide Test is on the alpha release, use with caution. APIs are likely to change before the stable version, that there will be breaking changes and that we're not supporting it for external production sites at the moment.
