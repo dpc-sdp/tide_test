@@ -80,6 +80,7 @@ help:
 ## Install dependencies
 install:
 	$(call title,Installing dependencies)
+	$(call exec,docker-compose exec cli bash -c "composer clearcache")
 	$(call exec,docker-compose exec cli apk add --update make jq)
 	# Download development config from Tide profile repository.
 	$(call exec,docker-compose exec cli bash -c "curl -L --header 'Accept: application/vnd.github.v3.raw' --header 'User-Agent: dpc-sdp/tide curl v7.47.0' $(COMPOSER_DEV_URL) > $(APP)/composer.dev.json")
