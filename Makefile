@@ -86,8 +86,7 @@ install:
 	$(call exec,docker-compose exec cli bash -c "composer clearcache")
 	# Merge module's and development composer configs.
 	$(call exec,docker-compose exec cli bash -c "jq --indent 4 -M -s '.[0] * .[1]' $(APP)/composer.json $(APP)/composer.dev.json > $(COMPOSER_BUILD)")
-	#$(call exec,docker-compose exec cli bash -c "COMPOSER=$(COMPOSER_BUILD) composer install -n --ansi --prefer-dist --no-suggest")
-	$(call exec,docker-compose exec cli bash -c "COMPOSER=$(COMPOSER_BUILD) composer install -n --ansi")
+	$(call exec,docker-compose exec cli bash -c "COMPOSER=$(COMPOSER_BUILD) composer install -n --ansi --prefer-dist --no-suggest")
 
 ## Install current module.
 install-module:
