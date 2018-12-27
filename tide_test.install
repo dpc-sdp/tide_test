@@ -32,14 +32,21 @@ function tide_test_install() {
     }
   }
 
-  // Set the default and admin theme to Seven. It is important to set themes
-  // only to enabled ones (and we are enabling Seven in profile dependencies).
-  \Drupal::configFactory()
-    ->getEditable('system.theme')
-    ->set('default', 'seven')
-    ->set('admin', 'seven')
-    ->save(TRUE);
+  // Enable Seven theme if current theme is not set or Classy (usually
+  // happens when using minimal or testing profile).
+  $default_theme = \Drupal::service('theme_handler')->getDefault();
+  print 'Current theme is ' . $default_theme;
+  if (is_null($default_theme) || $default_theme == 'classy') {
+    \Drupal::service('theme_installer')->install(['seven']);
+
+    \Drupal::configFactory()
+      ->getEditable('system.theme')
+      ->set('default', 'seven')
+      ->set('admin', 'seven')
+      ->save(TRUE);
+  }
 }
+
 /**
  * Implements hook_uninstall().
  */
