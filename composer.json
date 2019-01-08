@@ -4,10 +4,8 @@
     "type": "drupal-module",
     "license": "GPL-2.0-or-later",
     "require": {
-        "drupal/smart_trim": "1.1"
-    },
-    "suggest": {
-        "dpc-sdp/tide_core:dev-ci": "Core functionality for Tide Drupal 8 distribution"
+        "drupal/smart_trim": "1.1",
+        "dpc-sdp/tide_core": "dev-ci"
     },
     "repositories": {
         "drupal": {
