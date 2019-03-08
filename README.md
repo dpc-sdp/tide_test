@@ -1,5 +1,7 @@
 # Tide Test
-Page content type for [Tide](https://github.com/dpc-sdp/tide) distribution for [Drupal 8](https://github.com/dpc-sdp)
+Test content type for [Tide](https://github.com/dpc-sdp/tide) distribution for [Drupal 8](https://github.com/dpc-sdp)
+
+This module is used for independent testing of configuration added by modules to all content types. Do not install this module on its own; the modules having Behat tests based on "Test" content type should define `tide_test` as a dependency.
 
 Tide is a Drupal 8 distribution focused on delivering an API first, headless Drupal content administration site.
 
@@ -12,8 +14,6 @@ Tide is a Drupal 8 distribution focused on delivering an API first, headless Dru
 ## What is in this package
 - content type
 - fields
-- blocks
-- views
 - JSONAPI module integration
 
 ## Installation
@@ -23,10 +23,10 @@ your `composer.json`:
 ```json
 {
   "repositories": {        
-      "dpc-sdp/tide_page": {
+      "dpc-sdp/tide_test": {
           "type": "vcs",
           "no-api": true,
-          "url": "https://github.com/dpc-sdp/tide_page.git"
+          "url": "https://github.com/dpc-sdp/tide_test.git"
       }
   }
 }
@@ -34,7 +34,7 @@ your `composer.json`:
 
 Require this package as any other Composer package:
 ```bash
-composer require dpc/tide_page 
+composer require dpc/tide_test 
 ``` 
 
 ## Support
@@ -64,8 +64,7 @@ To start local development stack:
 - [tide_news](https://github.com/dpc-sdp/tide_news)       
 - [tide_page](https://github.com/dpc-sdp/tide_page)       
 - [tide_search](https://github.com/dpc-sdp/tide_search)   
-- [tide_site](https://github.com/dpc-sdp/tide_site)       
-- [tide_test](https://github.com/dpc-sdp/tide_test)       
+- [tide_site](https://github.com/dpc-sdp/tide_site)          
 - [tide_webform](https://github.com/dpc-sdp/tide_webform)  
 
 ## License
