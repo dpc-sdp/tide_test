@@ -77,6 +77,7 @@ function tide_test_field_widget_form_alter(&$element, FormStateInterface $form_s
     // knowledge of Tide Site.
     /** @var \Drupal\Core\Field\BaseFieldDefinition $field_definition */
     $field_definition = $context['items']->getFieldDefinition();
+    
     if ($field_definition && $field_definition->getTargetEntityTypeId() == 'node' && $field_definition->getTargetBundle() == 'test') {
       if (TideSiteFields::isSiteField($field_definition->getName(), TideSiteFields::FIELD_SITE)) {
         $options = array_keys($element['#options']);
