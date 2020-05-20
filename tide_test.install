@@ -35,7 +35,7 @@ function tide_test_install() {
   // happens when using minimal or testing profile).
   $default_theme = \Drupal::service('theme_handler')->getDefault();
   print 'Current theme is ' . $default_theme;
-  if (is_null($default_theme) || $default_theme == 'classy') {
+  if (is_null($default_theme) || $default_theme == 'classy' || $default_theme == 'stark') {
     \Drupal::service('theme_installer')->install(['seven']);
 
     \Drupal::configFactory()
