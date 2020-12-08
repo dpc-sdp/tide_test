@@ -3,7 +3,9 @@
     "description": "Test content type and related configuration for Tide Drupal 8 distribution",
     "type": "drupal-module",
     "license": "GPL-2.0-or-later",
-    "require": {},
+    "require": {
+        "dpc-sdp/tide_core": "^2.0.0"
+    },
     "repositories": {
         "drupal": {
             "type": "composer",
