@@ -66,7 +66,7 @@ function tide_test_modules_installed($modules) {
 /**
  * Implements hook_field_widget_form_alter().
  *
- * @todo: Extract into a service.
+ * @todo Extract into a service.
  */
 function tide_test_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
   // Check if the tide_site module is enabled.
