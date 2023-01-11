@@ -80,13 +80,13 @@ function tide_test_field_widget_form_alter(&$element, FormStateInterface $form_s
     if ($field_definition && $field_definition->getTargetEntityTypeId() == 'node' && $field_definition->getTargetBundle() == 'test') {
       if (TideSiteFields::isSiteField($field_definition->getName(), TideSiteFields::FIELD_SITE)) {
         $options = array_keys($element['#options']);
-        if (empty($element['#default_value']) || !count($element['#default_value'])) {
+        if (empty($element['#default_value'])) {
           $element['#default_value'] = [reset($options)];
         }
       }
 
       if (TideSiteFields::isSiteField($field_definition->getName(), TideSiteFields::FIELD_PRIMARY_SITE)) {
-        if (empty($element['#default_value']) || !count($element['#default_value'])) {
+        if (empty($element['#default_value'])) {
           $options = array_keys($element['#options']);
           $element['#default_value'] = reset($options);
         }
