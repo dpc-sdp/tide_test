@@ -1,13 +1,13 @@
 # Tide Test
-Test content type for [Tide](https://github.com/dpc-sdp/tide) distribution for [Drupal 8](https://github.com/dpc-sdp)
+Test content type for [Tide](https://github.com/dpc-sdp/tide) distribution for [Drupal 10](https://github.com/dpc-sdp)
 
 This module is used for independent testing of configuration added by modules to all content types. Do not install this module on its own; the modules having Behat tests based on "Test" content type should define `tide_test` as a dependency.
 
-Tide is a Drupal 8 distribution focused on delivering an API first, headless Drupal content administration site.
+Tide is a Drupal 10 distribution focused on delivering an API first, headless Drupal content administration site.
 
 [![CircleCI](https://circleci.com/gh/dpc-sdp/tide_test.svg?style=shield&circle-token=2a0e49166724ac193636fba5b458024e00342dce)](https://circleci.com/gh/dpc-sdp/tide_test)
 [![Release](https://img.shields.io/github/release/dpc-sdp/tide_test.svg)](https://github.com/dpc-sdp/tide_test/releases/latest)
-![https://www.drupal.org/8](https://img.shields.io/badge/Drupal-8-blue.svg)
+![https://www.drupal.org/about/10](https://img.shields.io/badge/Drupal-10-blue.svg)
 [![Licence: GPL 2](https://img.shields.io/badge/licence-GPL2-blue.svg)](https://github.com/dpc-sdp/tide_test/blob/master/LICENSE.txt)
 [![Pull Requests](https://img.shields.io/github/issues-pr/dpc-sdp/tide_page.svg)](https://github.com/dpc-sdp/tide_test/pulls)
 
