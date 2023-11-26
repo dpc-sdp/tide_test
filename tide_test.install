@@ -31,16 +31,15 @@ function tide_test_install() {
     }
   }
 
-  // Enable Seven theme if current theme is not set or Classy (usually
+  // Enable Claro theme if current theme is not set or Classy (usually
   // happens when using minimal or testing profile).
   $default_theme = \Drupal::service('theme_handler')->getDefault();
-  if (is_null($default_theme) || $default_theme === 'classy' || $default_theme === 'stark') {
-    \Drupal::service('theme_installer')->install(['seven']);
-
+  if (is_null($default_theme) || $default_theme === 'classy' || $default_theme === 'stark' || $default_theme === 'seven') {
+    \Drupal::service('theme_installer')->install(['claro']);
     \Drupal::configFactory()
       ->getEditable('system.theme')
-      ->set('default', 'seven')
-      ->set('admin', 'seven')
+      ->set('default', 'claro')
+      ->set('admin', 'claro')
       ->save(TRUE);
   }
 }

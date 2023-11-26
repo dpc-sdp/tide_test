@@ -68,7 +68,7 @@ function tide_test_modules_installed($modules) {
  *
  * @todo Extract into a service.
  */
-function tide_test_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+function tide_test_field_widget_single_element_form_alter(&$element, FormStateInterface $form_state, $context) {
   // Check if the tide_site module is enabled.
   $moduleHandler = \Drupal::service('module_handler');
   if ($moduleHandler->moduleExists('tide_site')) {
@@ -80,13 +80,13 @@ function tide_test_field_widget_form_alter(&$element, FormStateInterface $form_s
     if ($field_definition && $field_definition->getTargetEntityTypeId() == 'node' && $field_definition->getTargetBundle() == 'test') {
       if (TideSiteFields::isSiteField($field_definition->getName(), TideSiteFields::FIELD_SITE)) {
         $options = array_keys($element['#options']);
-        if (empty($element['#default_value']) || !count($element['#default_value'])) {
+        if (empty($element['#default_value'])) {
           $element['#default_value'] = [reset($options)];
         }
       }
 
       if (TideSiteFields::isSiteField($field_definition->getName(), TideSiteFields::FIELD_PRIMARY_SITE)) {
-        if (empty($element['#default_value']) || !count($element['#default_value'])) {
+        if (empty($element['#default_value'])) {
           $options = array_keys($element['#options']);
           $element['#default_value'] = reset($options);
         }
