@@ -6,7 +6,6 @@ dependencies:
       - tide_test
   module:
     - menu_ui
-    - wysiwyg_template
 third_party_settings:
   menu_ui:
     available_menus: {  }
