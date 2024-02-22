@@ -10,8 +10,6 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-  wysiwyg_template:
-    default_template: ''
 name: Test
 type: test
 description: 'Test content type'
